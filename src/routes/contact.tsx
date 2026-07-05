@@ -33,10 +33,10 @@ function Contact() {
       <div className="mt-8 rounded-lg border border-border bg-card p-8">
         <div className="text-sm font-semibold text-foreground">Email</div>
         <a
-          href="mailto:hello@americanclassicslibrary.com"
+          href="mailto:anwar1bahida1@gmail.com"
           className="mt-1 block font-serif text-2xl text-primary hover:underline break-all"
         >
-          hello@americanclassicslibrary.com
+          americanclassicslibrary@gmail.com
         </a>
         <p className="mt-4 text-sm text-muted-foreground">
           We read every message, and reply to most within a few days.
