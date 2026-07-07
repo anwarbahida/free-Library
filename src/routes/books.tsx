@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { books, genres } from "../lib/books";
 
 export const Route = createFileRoute("/books")({
@@ -31,12 +31,15 @@ function BooksIndex() {
           {books.length} American classics, free to read.
         </h1>
         <p className="mt-4 text-muted-foreground leading-relaxed">
-          The full collection. Every book is in the U.S. public domain — download the
-          PDF, read it in your browser, or send it to your Kindle.
+          The full collection. Every book is in the U.S. public domain — download the PDF, read it
+          in your browser, or send it to your Kindle.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {genres.map((g) => (
-            <span key={g} className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground">
+            <span
+              key={g}
+              className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground"
+            >
               {g}
             </span>
           ))}
@@ -45,10 +48,8 @@ function BooksIndex() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {books.map((b) => (
-          <Link
+          <article
             key={b.slug}
-            to="/books/$slug"
-            params={{ slug: b.slug }}
             className="group rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition flex flex-col"
           >
             <div
@@ -56,16 +57,34 @@ function BooksIndex() {
               style={{ background: b.coverGradient }}
             >
               <div className="font-serif text-xl font-semibold leading-tight">{b.title}</div>
-              <div className="mt-1 text-xs opacity-80">{b.author} · {b.year}</div>
-            </div>
-            <div className="p-4 flex-1 flex flex-col">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">{b.genre}</div>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">{b.summary}</p>
-              <div className="mt-3 text-sm font-semibold text-primary group-hover:underline">
-                Open →
+              <div className="mt-1 text-xs opacity-80">
+                {b.author} · {b.year}
               </div>
             </div>
-          </Link>
+            <div className="p-4 flex-1 flex flex-col">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                {b.genre}
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                {b.summary}
+              </p>
+              <a
+                href={b.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:underline"
+                aria-label={`Open the PDF of ${b.title} in a new tab`}
+              >
+                Open PDF
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
+            </div>
+          </article>
         ))}
       </div>
     </div>

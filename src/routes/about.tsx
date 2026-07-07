@@ -22,22 +22,23 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <p className="text-xs font-semibold uppercase tracking-widest text-accent-foreground mb-3">About</p>
+      <p className="text-xs font-semibold uppercase tracking-widest text-accent-foreground mb-3">
+        About
+      </p>
       <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground leading-tight">
         A quiet home for the American canon.
       </h1>
       <div className="mt-8 space-y-6 text-lg text-muted-foreground leading-relaxed">
         <p>
-          American Classics Library exists to make the great works of American
-          literature — the ones that helped invent what "American writing" even
-          means — as easy as possible to pick up and read.
+          American Classics Library exists to make the great works of American literature — the ones
+          that helped invent what "American writing" even means — as easy as possible to pick up and
+          read.
         </p>
         <p>
-          Every book in the collection has entered the U.S. public domain. That
-          means anyone, anywhere, has the legal right to read, download, print,
-          and share these texts. We don't lock anything behind an account, a
-          subscription, or a paywall. We don't try to guess what you want to read
-          next. We just keep a small, hand-picked shelf, and we try to make each
+          Every book in the collection has entered the U.S. public domain. That means anyone,
+          anywhere, has the legal right to read, download, print, and share these texts. We don't
+          lock anything behind an account, a subscription, or a paywall. We don't try to guess what
+          you want to read next. We just keep a small, hand-picked shelf, and we try to make each
           book easy to open.
         </p>
         <p>
@@ -50,12 +51,12 @@ function About() {
           >
             Project Gutenberg
           </a>
-          , the volunteer-run digital library that has been preserving public-domain
-          texts since 1971.
+          , the volunteer-run digital library that has been preserving public-domain texts since
+          1971.
         </p>
         <p>
-          This site is supported by unobtrusive advertising. That's how the
-          servers stay on and the books stay free.
+          This site is supported by unobtrusive advertising. That's how the servers stay on and the
+          books stay free.
         </p>
       </div>
       <div className="mt-10">

@@ -28,7 +28,9 @@ export const Route = createFileRoute("/books/$slug")({
     <div className="mx-auto max-w-2xl px-6 py-24 text-center">
       <h1 className="font-serif text-3xl font-semibold">Something went wrong</h1>
       <p className="mt-2 text-muted-foreground">{error.message}</p>
-      <Link to="/books" className="mt-6 inline-block text-primary font-semibold">← Back to library</Link>
+      <Link to="/books" className="mt-6 inline-block text-primary font-semibold">
+        ← Back to library
+      </Link>
     </div>
   ),
   component: BookDetail,
@@ -39,7 +41,9 @@ function NotFound() {
     <div className="mx-auto max-w-2xl px-6 py-24 text-center">
       <h1 className="font-serif text-3xl font-semibold">Book not found</h1>
       <p className="mt-2 text-muted-foreground">We couldn't find that book in our library.</p>
-      <Link to="/books" className="mt-6 inline-block text-primary font-semibold">← Back to library</Link>
+      <Link to="/books" className="mt-6 inline-block text-primary font-semibold">
+        ← Back to library
+      </Link>
     </div>
   );
 }
@@ -51,9 +55,13 @@ function BookDetail() {
   return (
     <article className="mx-auto max-w-5xl px-6 py-12">
       <nav className="text-sm text-muted-foreground mb-8">
-        <Link to="/" className="hover:text-primary">Home</Link>
+        <Link to="/" className="hover:text-primary">
+          Home
+        </Link>
         <span className="mx-2">/</span>
-        <Link to="/books" className="hover:text-primary">Library</Link>
+        <Link to="/books" className="hover:text-primary">
+          Library
+        </Link>
         <span className="mx-2">/</span>
         <span className="text-foreground">{book.title}</span>
       </nav>
@@ -125,7 +133,10 @@ function BookDetail() {
                 params={{ slug: r.slug }}
                 className="group rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition"
               >
-                <div className="aspect-[3/4] flex flex-col justify-end p-4 text-white" style={{ background: r.coverGradient }}>
+                <div
+                  className="aspect-[3/4] flex flex-col justify-end p-4 text-white"
+                  style={{ background: r.coverGradient }}
+                >
                   <div className="font-serif text-lg font-semibold leading-tight">{r.title}</div>
                   <div className="mt-1 text-xs opacity-80">{r.author}</div>
                 </div>
